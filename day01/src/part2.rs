@@ -10,7 +10,6 @@ fn main() {
     let mut count = 0;
 
     for index in 2..depths.len()-1 {
-        println!("{} | a = {:?}, b = {:?}", index, window_a, window_b);
         let sum_a = window_a[0] + window_a[1] + window_a[2];
         let sum_b = window_b[0] + window_b[1] + window_b[2];
         if sum_b > sum_a {
@@ -23,5 +22,5 @@ fn main() {
         window_b = &depths[index..index+3];
     }
 
-    println!("Number of increases is {}", count);
+    println!("Number of sliding window increases is {}", count);
 }
